@@ -6,7 +6,7 @@ import Task from './models/Task.js';
 
 dotenv.config();
 
-(async () => {
+export const seed = (async () => {
     let user, projects;
     try {
         await mongoose.connect(process.env.MONGO_URI);
