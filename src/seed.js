@@ -112,4 +112,4 @@ export const seed = (async () => {
     }
 
     process.exit(0);
-})();
+});
