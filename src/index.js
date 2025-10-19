@@ -30,8 +30,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Middleware: CORS
-app.use(cors());
-
+app.use(cors({
+  origin: "https://assingment-xi.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // if you use cookies
+}));
 // Default route
 app.get('/', (req, res) => {
   res.send('Assignment server is running smoothly!');
