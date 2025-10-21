@@ -3,7 +3,7 @@ import auth from '../middlewares/auth.js';
 import { createProject, getProjects, updateProject, deleteProject } from '../controllers/projectController.js';
 
 const router = Router();
-router.use(auth);
+// router.use(auth);
 
 router.post('/', createProject);
 router.get('/', getProjects);

@@ -3,7 +3,7 @@ import auth from '../middlewares/auth.js';
 import { createTask, getTasks, updateTask, deleteTask } from '../controllers/taskController.js';
 
 const router = Router();
-router.use(auth);
+// router.use(auth);
 
 router.post('/:projectId', createTask);
 router.get('/:projectId', getTasks);
