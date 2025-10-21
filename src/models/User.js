@@ -41,8 +41,7 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
-// ✅ Indexes for better performance
-userSchema.index({ email: 1 });
+
 userSchema.index({ createdAt: 1 });
 
 export default model('User', userSchema);

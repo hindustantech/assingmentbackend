@@ -25,6 +25,9 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+// ✅ Add this line before middleware like rate limiter
+app.set('trust proxy', 1); 
+
 // ✅ Use express built-in body parsers (no need for body-parser)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
